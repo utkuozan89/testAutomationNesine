@@ -21,7 +21,7 @@ public class Login {
     @And("^Kullanıcı adı ve şifre girilerek, \"Giriş\" butonuna tıklanır$")
     public void Login() throws Throwable {
         MainPage.setUserName(TestData.userName);
-        MainPage.setPassword(BaseLibrary.decrypt(TestData.password));
+        MainPage.setPassword(TestData.password);
         MainPage.clickLogin();
         MainPage.isLogin();
     }

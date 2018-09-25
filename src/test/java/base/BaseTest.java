@@ -34,8 +34,7 @@ public class BaseTest extends BaseLibrary {
     public void setUp() {
 //        PhantomJsDriverManager.getInstance().useTaobaoMirror().setup();
 //        Configuration.browser = "PhantomJS";
-//        ChromeDriverManager.getInstance().setup();
-//        Configuration.browser = "Chrome";
+
         String sysProperties = "";
         sysProperties += "Setup started";
         sysProperties += "\nfile.encoding: " + String.format("file.encoding: %s", System.getProperty("file.encoding"));
@@ -44,7 +43,9 @@ public class BaseTest extends BaseLibrary {
         sysProperties += "\njava.runtime.version" + System.getProperty("java.runtime.version");
         sysProperties += "\nlocale default:" + Locale.getDefault();
         WebDriverRunner.addListener(new DriverEventListener());
-        System.setProperty("webdriver.chrome.driver", "C:\\SeleniumDrivers\\chromedriver\\chromedriver.exe");
+        ChromeDriverManager.getInstance().setup();
+        Configuration.browser = "Chrome";
+        //System.setProperty("webdriver.chrome.driver", "C:\\SeleniumDrivers\\chromedriver\\chromedriver.exe");
         Configuration.browser = (System.getProperty("browser") == null) ? "chrome" : System.getProperty("browser");
         Configuration.driverManagerEnabled = false;
         Configuration.reportsFolder = "test-result/reports";
