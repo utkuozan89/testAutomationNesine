@@ -27,7 +27,7 @@ public class CommentAddDelete {
         KupondasPage.clickCommentArea();
         KupondasPage.writeComment();
     }
-    @Then("^Oluşturduğunuz yorumun üzerinde geldiğinizde X butonu görüntülenmektedir, tıklanarak oluşturulan yorum silinir$")
+    @And("^Oluşturduğunuz yorumun üzerinde geldiğinizde X butonu görüntülenmektedir, tıklanarak oluşturulan yorum silinir$")
     public void clickDeleteComment() throws Throwable {
         KupondasPage.deleteComment();
     }

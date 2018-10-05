@@ -15,10 +15,14 @@ import static com.codeborne.selenide.Selenide.$;
 public class MainPageUstMenu extends BaseLibrary {
     static SelenideElement BTN_EDITORYORUMLARI_XPATH = $(By.xpath("//li[@id='iddaa-nav']//a[text()='Editör Yorumları']"));
     static SelenideElement BTN_KUPONDAS_XPATH = $(By.xpath("//li[@id='iddaa-nav']//a[text()='Kupondaş']"));
+    static SelenideElement BTN_CALISONUCLAR_XPATH = $(By.xpath("//li[@id='iddaa-nav']//a[text()='Canlı Sonuçlar']"));
     public static void clickBtnEditorYorumlari() {
         BTN_EDITORYORUMLARI_XPATH.click();
     }
     public static void clickBtnKupondas() {
         BTN_KUPONDAS_XPATH.click();
+    }
+    public static void clickBtnCanliSonuclar() {
+        BTN_CALISONUCLAR_XPATH.click();
     }
 }

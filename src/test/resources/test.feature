@@ -13,4 +13,10 @@ Feature: nesine test
     And Kupondaş menüsüne tıklanır
     And Tüm paylaşımlar alanında ilk sırada bulunan kullanıcı kuponuna tıklanır
     And "Kupona yorum yaz" içeren input tıklanarak, açılan popup üzerinde yorum yazılır
-    Then Oluşturduğunuz yorumun üzerinde geldiğinizde X butonu görüntülenmektedir, tıklanarak oluşturulan yorum silinir
+    And Oluşturduğunuz yorumun üzerinde geldiğinizde X butonu görüntülenmektedir, tıklanarak oluşturulan yorum silinir
+    Then Hesabım menüsünden çıkış işlemi yapılır
+  Scenario: canlı sonuclar aç
+    Given nesine.com  sitesine girilir
+    And Kullanıcı adı ve şifre girilerek, "Giriş" butonuna tıklanır
+    And Canlı Sonuçlar Menüsüne Tıklanır
+    Then Canlı Sonuçlar Sayfası Açıldı mı
