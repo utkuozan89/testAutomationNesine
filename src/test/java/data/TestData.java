@@ -9,5 +9,5 @@ package data;
 public class TestData {
     public static final String url = "https://www.nesine.com/";
     public static final String userName = "utkuozanocak@gmail.com";
-    public static final String password = "Test1234";
+    public static final String password = "*****";
 }
